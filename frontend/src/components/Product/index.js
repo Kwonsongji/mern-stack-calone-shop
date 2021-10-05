@@ -5,7 +5,8 @@ import { NavLink } from 'react-router-dom';
 //import moonPendant from '../assets/fonts/moon-pendant.png';
 
 
-const Product = ({name, image, price, material, productId}) => {
+const Product = ({ name, image, price, material, id }) => {
+ 
   return (
     <div className="product">
        <img
@@ -21,10 +22,11 @@ const Product = ({name, image, price, material, productId}) => {
           {material}
         </p>
         <p className="product__info__price"> {price} euros</p>
+        <p className="product__info__price">productId {id}</p>
         <NavLink
           className="product__info__button"
           activeClassName="nav-item--active"
-          to={`/produit/${productId}`} 
+          to={`/produit/${id}`} 
         >
           Voir
         </NavLink>

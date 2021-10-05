@@ -38,7 +38,7 @@ const HomeScreen = () => {
               image={product.image}
               price={product.price}
               material={product.material}
-              productId={product._id}
+              id={product._id}
             />
           )))
         }
