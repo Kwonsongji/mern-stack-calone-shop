@@ -1,0 +1,43 @@
+@use '../../styles/vars' as v;
+
+.user__signin{
+  &__dropdown {
+    font-size: v.$gutter;
+    color:black;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+  }
+  &__dropdown-content {
+    font-size: v.$gutter;
+    position: absolute;
+    display: block;
+    margin: 0;
+    min-width: 1rem;
+    padding: 1em;
+    z-index: 1;
+    background-color: #86A8E7;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    cursor:pointer;
+    
+  }
+  &__dropdown:hover &__dropdown-content {
+    display: block;
+    text-decoration: none;
+    color: black;
+    
+  }
+
+}
+
+.user__signin__name {
+  color: black;
+}
+
+.user__signin__name__dropdown {
+  color: white;
+  margin-bottom: 30px;
+}

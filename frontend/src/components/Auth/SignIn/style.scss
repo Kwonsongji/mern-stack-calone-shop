@@ -1,0 +1,125 @@
+ @use '../../styles/vars' as v;
+
+.signIn__main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: v.$poppins;
+  color: black;
+  opacity: .4em;
+  
+}
+
+
+.signIn {
+  &__body {
+    overflow: hidden;
+  }
+  &__section {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    //background: linear-gradient(to bottom, hsl(299, 52%, 41%), #8a78da);
+    //filter: blur(0.8125em);
+    
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__container {
+    position : relative;
+    width: 400px;
+    min-height: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    //border: 1px solid rgba(255,255,255, 0.5);
+    //border-right: 1px solid rgba(255,255,255, 0.2);
+    //border-bottom: 1px solid rgba(255,255,255, 0.2);
+  }
+  &__form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px
+  }
+  &__title {
+    position: relative;
+   /*  color:#fff; */
+    font-size: v.$gutter*2;
+    font-weight:600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+
+  }
+  &__title::before {
+    content:'';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    width:80px;
+    height: 4px;
+    background: #fff;
+  }
+  &__form &__inputBox  {
+    width: 100%;
+    margin-top: 20px;
+  }
+  &__inputBox input{
+    width:80%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px; 
+    border: 1px solid rgba(255,255,255, 0.5);
+    border-right: 1px solid rgba(255,255,255, 0.2);
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    font-size: v.$gutter;
+    letter-spacing: 1px;
+    /* color: #ffff */;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  
+  }
+   &__form {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255, 0.5);
+    border-right: 1px solid rgba(255,255,255, 0.2);
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    font-size: v.$gutter;
+    letter-spacing: 1px;
+    /* color: #ffff */;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05)
+  }
+  &__form &__inputBox input::placeholder { 
+    // color: #ffff;
+  }
+  &__form &__inputBox input[type="submit"] { 
+    background-color: v.$light-color;
+    color:v.$black-color;
+    max-width: 125px;
+    cursor:pointer;
+    margin-bottom: 20px;
+    font-weight: 600px;
+  }
+
+}
+
+.forget {
+  margin-top:5px;
+  color: black !important;
+  font-weight: 100;
+/*   color: v.$light-color; */
+}
+ 

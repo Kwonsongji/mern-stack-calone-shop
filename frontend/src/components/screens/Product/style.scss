@@ -1,0 +1,110 @@
+@use '../../styles/vars' as v;
+
+.productScreen {
+  max-width: 1300px;
+  margin: v.$gutter auto; //1 rem de space et au centre
+  display: flex;
+  
+  &__left {
+    display: flex;
+    flex: 0.8; // grosseur
+    background-color: #171717;
+   
+    &__image {
+      margin: v.$gutter;
+      flex:0.6;
+    }
+    &__info {
+      margin: v.$gutter;
+      flex:0.4;
+      //background: #fff;
+      height: fit-content;
+      font-size:0.9rem;
+       border-radius: 8px;
+    }
+     &__name {
+       font-weight: bold;
+       font-size: v.$gutter*0,5;
+     }
+  }
+  &__left__info > p,
+  &__right__info > p {
+    padding: v.$gutter;
+    border-bottom: 1px solid rgba(0,0,0, 0.2);
+  }
+  &__left__info > p:last-child,
+  &__right__info > p:last-child {
+    border:none;
+  } 
+  &__right {
+    flex:0.2;
+     &__info {
+       width: 250px; //250px
+       margin: v.$gutter;
+      background-color: #171717;
+       box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+        border-radius: 8px;
+       & p {
+         padding: v.$gutter;
+         font-size: 0.8rem;
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         
+       }
+       & select {
+          padding: 1em;
+       }
+       
+     }
+     
+  }
+  
+  
+}
+
+.productScreen__right__add {
+          padding: 1em;
+          position: relative; // agit indépendament du block
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          text-align: center; 
+           background: #171717;
+           color: #f4f4f4;
+           border: 1px solid #171717;
+           border-radius: 8px;
+           cursor:pointer;
+}
+
+.productScreen__right__add:hover {
+  background: #f4f4f4;
+  color: #171717;
+}
+
+@media (max-width: 960px) {
+  .productScreen {
+    flex-direction: column;
+
+    &__left {
+      flex-direction: column;
+      flex:1;
+      &__image {
+        flex:1;
+      }
+      &__info {
+      flex:1;
+     }
+    }
+     
+    &__right {
+      flex: 1;
+      padding:1rem;
+      &__info {
+        width: 100vw; 
+        margin: 0;
+
+      }
+    }
+  }
+
+}

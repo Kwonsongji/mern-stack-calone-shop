@@ -1,0 +1,95 @@
+@use '../../styles/vars' as v;
+
+
+.payment-method {
+  &__form {
+    position: relative;
+    width: 50vw;
+    height: 50%;
+    margin: auto;
+    padding: 3em;
+  }
+  &__form__title {
+    position: relative;
+    color:black;
+    font-size: v.$gutter*2;
+    font-weight:600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+
+  }
+
+  &__form  &__form__inputBox   {
+    width: 50vw;
+   /*  margin-top: 20px; */
+  }
+ &__form__inputBox input  {
+    width:30vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 35px; 
+    border: 1px solid rgba(255,255,255, 0.5);
+    border-right: 1px solid rgba(255,255,255, 0.2);
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    font-size: v.$gutter;
+    letter-spacing: 1px;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  
+  }
+   &__form {
+    /* width: 100%;  */
+    background-color: rgba(255, 255, 255, 0.2);
+ /*    border: none;
+    outline: none; */
+  /*   padding: 10px 20px; */
+    border-radius: 40px;// change
+    border: 1px solid rgba(255,255,255, 0.5);
+    border-right: 1px solid rgba(255,255,255, 0.2);
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    font-size: v.$gutter;
+    letter-spacing: 1px;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05)
+  }
+ 
+ /*  &__form */ &__form__button { 
+    background-color:#e33dae;
+    color: black;
+    max-width: 240px;
+    padding:1em;
+    font-size: 1rem;
+    cursor:pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+   
+  
+  }
+  &__form__button {
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+/* 
+.shipping-adress__inputBox {
+   //padding: 1em; 
+}
+ */
+.payment-method__form__labelBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.payment-method__form__label {
+/*    margin-bottom:100px; */
+   font-size: 1rem;
+   font-weight: 400;
+   //display: inline;
+
+}
